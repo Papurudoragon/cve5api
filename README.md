@@ -5,7 +5,9 @@
 The latest version of CVE (5.0) is available. This api simply pulls data from that repository, and allows for querying the data based on search parameters.
 
 
-# requires go1.21 to install successfully. Run the following command to install the latest version:
+# Install
+
+**requires go1.21 to install successfully. Run the following command to install the latest version:**
 
 ```
 go install github.com/Papurudoragon/cve5api@latest
