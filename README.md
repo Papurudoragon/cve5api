@@ -1,8 +1,16 @@
-#CVE version 5.0 API 
+# CVE version 5.0 API 
 
 **by papv2**
 
 The latest version of CVE (5.0) is available. This api simply pulls data from that repository, and allows for querying the data based on search parameters.
+
+
+# requires go1.21 to install successfully. Run the following command to install the latest version:
+
+```
+go install github.com/Papurudoragon/cve5api@latest
+```
+
 
 **Notes**
 
@@ -10,7 +18,7 @@ The latest version of CVE (5.0) is available. This api simply pulls data from th
 
     Content-Type: application/json *MUST* be used in the request
 
-#Usage
+# Usage
 
 ```
     GET http://<ip or url>:8080/api/cve?parameter1=valu1&parameter2=value2
@@ -43,11 +51,11 @@ The latest version of CVE (5.0) is available. This api simply pulls data from th
 
 
 
-#Installing the API to host Locally
+# Installing the API to host Locally
 
     1. Clone this repository
     
-    2. run main.go (for windows, just run the .exe file)
+    2. run main.go (for windows, just run the .exe file) -- see install instructions above
 
     3. one the api starts, send a POST request to login with the admin account 
         a. Login for default account:
