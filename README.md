@@ -11,6 +11,8 @@ The latest version of CVE (5.0) is available. This api simply pulls data from th
 
 ```
 go install github.com/Papurudoragon/cve5api@latest
+
+now you should just be able to run 'cve5api' in the cli to start the api
 ```
 
 
@@ -57,7 +59,7 @@ go install github.com/Papurudoragon/cve5api@latest
 
     1. Clone this repository
     
-    2. run main.go (for windows, just run the .exe file) -- see install instructions above
+    2. run cve5api (for windows, just run the .exe file) -- see install instructions above
 
     3. one the api starts, send a POST request to login with the admin account 
         a. Login for default account:
