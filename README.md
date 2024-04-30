@@ -1,4 +1,5 @@
 #CVE version 5.0 API 
+
 **by papv2**
 
 The latest version of CVE (5.0) is available. This api simply pulls data from that repository, and allows for querying the data based on search parameters.
@@ -11,8 +12,12 @@ The latest version of CVE (5.0) is available. This api simply pulls data from th
 
 #Usage
 
-```GET http://<ip or url>:8080/api/cve?parameter1=valu1&parameter2=value2...
-Content-Type: application/json```
+```
+    GET http://<ip or url>:8080/api/cve?parameter1=valu1&parameter2=value2
+    Content-Type: application/json
+```
+
+
 
 **Available Parameters for searching**
 
@@ -27,10 +32,15 @@ Content-Type: application/json```
     - `type`: Search by vulnerability type (choices are either `cwe` or `text`).
     - `type_description`: Search by vulnerability type description (a CWE or General Vulnerability description, e.g., improper access controls).
 
+
+
 **Example**
 
-```GET http://127.0.0.1:8080/api/cve?cve=2024&keyword=wordpress&type=cwe
-Content-Type: application/json```
+```
+    GET http://127.0.0.1:8080/api/cve?cve=2024&keyword=wordpress&type=cwe
+    Content-Type: application/json
+```
+
 
 
 #Installing the API to host Locally
@@ -42,13 +52,13 @@ Content-Type: application/json```
     3. one the api starts, send a POST request to login with the admin account 
         a. Login for default account:
 
-            ```POST  http://127.0.0.1:8080/api/users/login
+            POST  http://127.0.0.1:8080/api/users/login
             Content-Type: application/json
 
             {
                 "username": "admin",
                 "password": "password",
-                "email": "admin@emailhere.xyz"```
+                "email": "admin@emailhere.xyz"
             }
 
     4. The API will return a jwt token for Authorization and further admin function (expires in 2 hours)
@@ -66,16 +76,20 @@ Content-Type: application/json```
     6. Your API is ready to use via search functions and get requests above
 
 
+
+
 #Available Admin paths (Requires a valid jwt token for actions)
 
-```/api/users/login                    --> Login with an admin account
+```
+/api/users/login                    --> Login with an admin account
 /api/users/update/<id_number>       --> Update a single user by ID 
 /api/users/delete/<id_number>       --> Delete a single user by ID
 /api/users/<id_number>              --> Fetch user information by ID
 /api/users                          --> Fetch all users
 /api/update                         --> Update the DB with latest CVE 5.0 updates
 /api/delete                         --> Delete local copy of CVE DB (not recommended unless the db is giving issues)
-/api/users/create                   --> Create a new admin user```
+/api/users/create                   --> Create a new admin user
+```
 
 
 
